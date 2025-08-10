@@ -8,7 +8,7 @@
             private ?string $message = null,
             private ?array $data = null,
             private ?array $error = null,
-            private int $httpcode = 200
+            private int $httpCode = 200
             ){
             }
             
@@ -32,18 +32,18 @@
     }
     public function send():never{
         header("Content-Type: application/json");
-        http_response_code(response_code: $this->httpcode);
+        http_response_code(response_code: $this->httpCode);
         echo json_encode(value: $this);
         exit();
     }
 }
-$obj = new Response(
-    success: true,
-    message: "hello world",
-    data: ['teste'],
-    error:["teste erro"],
-    httpcode: 200
-);
-$obj->send();
+// $obj = new Response(
+//     success: true,
+//     message: "hello world",
+//     data: ['teste'],
+//     error:["teste erro"],
+//     httpcode: 200
+// );
+// $obj->send();
 
 ?>

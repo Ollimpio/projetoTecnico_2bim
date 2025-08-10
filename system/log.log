@@ -1,0 +1,135 @@
+[2025-08-10 22-39-53.000] [Throwable] 
+ Throwable thrown:
+Message:Division by zero
+Code:0
+File:C:\xampp\htdocs\2bim\api\src\routes\Roteador.php
+Line:24
+Trace:#0 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#1 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#3 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(192): Router->run()
+#4 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#5 {main} 
+ **************************************************************************************************** 
+[2025-08-10 23-38-14.000] [Throwable] 
+ Throwable thrown:
+Message:Division by zero
+Code:0
+File:C:\xampp\htdocs\2bim\api\src\routes\Roteador.php
+Line:24
+Trace:#0 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#1 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#3 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(192): Router->run()
+#4 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#5 {main} 
+ **************************************************************************************************** 
+[2025-08-11 00-28-14.000] [Throwable] 
+ Throwable thrown:
+Message:SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for 127.0.0.1,port=3306,dbname=Projeto_web,charset=utf8mb4 failed: Este host não é conhecido. 
+Code:2002
+File:C:\xampp\htdocs\2bim\api\src\db\Database.php
+Line:12
+Trace:#0 C:\xampp\htdocs\2bim\api\src\db\Database.php(12): PDO->__construct('mysql:host=127....', 'root', Object(SensitiveParameterValue), Array)
+#1 C:\xampp\htdocs\2bim\api\src\db\Database.php(31): Database::connect()
+#2 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(26): Database::getConnection()
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#6 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(199): Router->run()
+#7 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-08-11 00-32-51.000] [Throwable] 
+ Throwable thrown:
+Message:syntax error, unexpected variable "$dsn", expecting "function" or "const"
+Code:0
+File:C:\xampp\htdocs\2bim\api\src\db\Database.php
+Line:11
+Trace:#0 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#1 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#3 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(199): Router->run()
+#4 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#5 {main} 
+ **************************************************************************************************** 
+[2025-08-11 00-34-24.000] [Throwable] 
+ Throwable thrown:
+Message:SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for 127.0.0.1,port=3306,dbname=Projeto_web,charset=utf8mb4 failed: Este host não é conhecido. 
+Code:2002
+File:C:\xampp\htdocs\2bim\api\src\db\Database.php
+Line:19
+Trace:#0 C:\xampp\htdocs\2bim\api\src\db\Database.php(19): PDO->__construct('mysql:host=127....', 'root', Object(SensitiveParameterValue), Array)
+#1 C:\xampp\htdocs\2bim\api\src\db\Database.php(33): Database::connect()
+#2 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(26): Database::getConnection()
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#6 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(199): Router->run()
+#7 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-08-11 00-34-54.000] [Throwable] 
+ Throwable thrown:
+Message:SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for 127.0.0.1,port=3306,dbname=Projeto_web,charset=utf8mb4 failed: Este host não é conhecido. 
+Code:2002
+File:C:\xampp\htdocs\2bim\api\src\db\Database.php
+Line:20
+Trace:#0 C:\xampp\htdocs\2bim\api\src\db\Database.php(20): PDO->__construct('mysql:host=127....', 'root', Object(SensitiveParameterValue), Array)
+#1 C:\xampp\htdocs\2bim\api\src\db\Database.php(34): Database::connect()
+#2 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(26): Database::getConnection()
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#6 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(199): Router->run()
+#7 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-08-11 00-38-50.000] [Throwable] 
+ Throwable thrown:
+Message:SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for 127.0.0.1,port=3306,dbname=Projeto_web,charset=utf8mb4 failed: Este host não é conhecido. 
+Code:2002
+File:C:\xampp\htdocs\2bim\api\src\db\Database.php
+Line:13
+Trace:#0 C:\xampp\htdocs\2bim\api\src\db\Database.php(13): PDO->__construct('mysql:host=127....', 'root', Object(SensitiveParameterValue), Array)
+#1 C:\xampp\htdocs\2bim\api\src\db\Database.php(32): Database::connect()
+#2 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(26): Database::getConnection()
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#6 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(199): Router->run()
+#7 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-08-11 00-42-21.000] [Throwable] 
+ Throwable thrown:
+Message:SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for 127.0.0.1,port=3306,dbname=Projeto_web,charset=utf8mb4 failed: Este host não é conhecido. 
+Code:2002
+File:C:\xampp\htdocs\2bim\api\src\db\Database.php
+Line:13
+Trace:#0 C:\xampp\htdocs\2bim\api\src\db\Database.php(13): PDO->__construct('mysql:host=127....', 'root', Object(SensitiveParameterValue), Array)
+#1 C:\xampp\htdocs\2bim\api\src\db\Database.php(32): Database::connect()
+#2 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(26): Database::getConnection()
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#6 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(199): Router->run()
+#7 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-08-11 00-47-37.000] [Throwable] 
+ Throwable thrown:
+Message:SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for 127.0.0.1,port=3306,dbname=projeto_web,charset=utf8mb4 failed: Este host não é conhecido. 
+Code:2002
+File:C:\xampp\htdocs\2bim\api\src\db\Database.php
+Line:13
+Trace:#0 C:\xampp\htdocs\2bim\api\src\db\Database.php(13): PDO->__construct('mysql:host=127....', 'root', Object(SensitiveParameterValue), Array)
+#1 C:\xampp\htdocs\2bim\api\src\db\Database.php(32): Database::connect()
+#2 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(26): Database::getConnection()
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#6 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(199): Router->run()
+#7 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
