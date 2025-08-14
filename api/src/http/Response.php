@@ -37,13 +37,6 @@
         exit();
     }
 }
-// $obj = new Response(
-//     success: true,
-//     message: "hello world",
-//     data: ['teste'],
-//     error:["teste erro"],
-//     httpcode: 200
-// );
-// $obj->send();
+
 
 ?>

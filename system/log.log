@@ -133,3 +133,132 @@ Trace:#0 C:\xampp\htdocs\2bim\api\src\db\Database.php(13): PDO->__construct('mys
 #7 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
 #8 {main} 
  **************************************************************************************************** 
+
+[2025-08-12 22:46:11.000] [Throwable] 
+ 
+Throwable trown 
+Message: Call to a member function readAll() on null
+Code: 0
+File: C:\xampp\htdocs\2bim\api\src\routes\Roteador.php
+Line: 26
+Trace: #0 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#1 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#3 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(194): Router->run()
+#4 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#5 {main} 
+ ****************************************************************************************************
+[2025-08-13 01:33:25.000] [Throwable] 
+ 
+Throwable trown 
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':id_Aluno
+            ORDER BY nome ASC' at line 5
+Code: 42000
+File: C:\xampp\htdocs\2bim\api\src\DAO\AlunoDAO.php
+Line: 37
+Trace: #0 C:\xampp\htdocs\2bim\api\src\DAO\AlunoDAO.php(37): PDO->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\2bim\api\src\controllers\AlunoControl.php(21): AlunoDAO->readById(1)
+#2 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(44): AlunoControl->show(1)
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}('1')
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#6 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(205): Router->run()
+#7 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#8 {main} 
+ ****************************************************************************************************
+[2025-08-13 20:32:38.000] [Throwable] 
+ 
+Throwable trown 
+Message: Object of class stdClass could not be converted to string
+Code: 0
+File: C:\xampp\htdocs\2bim\api\src\routes\Roteador.php
+Line: 54
+Trace: #0 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#1 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#3 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(205): Router->run()
+#4 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#5 {main} 
+ ****************************************************************************************************
+[2025-08-13 21:07:06.000] [Throwable] 
+ 
+Throwable trown 
+Message: Object of class stdClass could not be converted to string
+Code: 0
+File: C:\xampp\htdocs\2bim\api\src\routes\Roteador.php
+Line: 57
+Trace: #0 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#1 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#3 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(213): Router->run()
+#4 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#5 {main} 
+ ****************************************************************************************************
+[2025-08-14 01:25:32.000] [Throwable] 
+ 
+Throwable trown 
+Message: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Code: HY093
+File: C:\xampp\htdocs\2bim\api\src\DAO\AlunoDAO.php
+Line: 58
+Trace: #0 C:\xampp\htdocs\2bim\api\src\DAO\AlunoDAO.php(58): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\2bim\api\src\middleware\AlunoMiddleware.php(78): AlunoDAO->readByName('Theo de Paula')
+#2 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(61): AlunoMiddleware->hasNotAlunoByName('Theo de Paula')
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#6 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(217): Router->run()
+#7 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#8 {main} 
+ ****************************************************************************************************
+[2025-08-14 01:29:07.000] [Throwable] 
+ 
+Throwable trown 
+Message: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Code: HY093
+File: C:\xampp\htdocs\2bim\api\src\DAO\AlunoDAO.php
+Line: 58
+Trace: #0 C:\xampp\htdocs\2bim\api\src\DAO\AlunoDAO.php(58): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\2bim\api\src\middleware\AlunoMiddleware.php(78): AlunoDAO->readByName('Theo de Paula')
+#2 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(61): AlunoMiddleware->hasNotAlunoByName('Theo de Paula')
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#6 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(217): Router->run()
+#7 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#8 {main} 
+ ****************************************************************************************************
+[2025-08-14 01:32:14.000] [Throwable] 
+ 
+Throwable trown 
+Message: Aluno::getNomeAluno(): Return value must be of type int, null returned
+Code: 0
+File: C:\xampp\htdocs\2bim\api\src\models\Aluno.php
+Line: 28
+Trace: #0 C:\xampp\htdocs\2bim\api\src\DAO\AlunoDAO.php(83): Aluno->getNomeAluno()
+#1 C:\xampp\htdocs\2bim\api\src\controllers\AlunoControl.php(39): AlunoDAO->create(Object(Aluno))
+#2 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(64): AlunoControl->store(Object(stdClass))
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#6 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(217): Router->run()
+#7 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#8 {main} 
+ ****************************************************************************************************
+[2025-08-14 01:33:00.000] [Throwable] 
+ 
+Throwable trown 
+Message: Aluno::getNomeAluno(): Return value must be of type int, string returned
+Code: 0
+File: C:\xampp\htdocs\2bim\api\src\models\Aluno.php
+Line: 28
+Trace: #0 C:\xampp\htdocs\2bim\api\src\DAO\AlunoDAO.php(83): Aluno->getNomeAluno()
+#1 C:\xampp\htdocs\2bim\api\src\controllers\AlunoControl.php(39): AlunoDAO->create(Object(Aluno))
+#2 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(64): AlunoControl->store(Object(stdClass))
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#6 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(217): Router->run()
+#7 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#8 {main} 
+ ****************************************************************************************************

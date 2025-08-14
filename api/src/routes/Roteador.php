@@ -1,7 +1,9 @@
 <?php
-    require_once "api/src/http/utils/Logger.php";
+    require_once "api/src/utils/Logger.php";
     require_once "api/src/http/Response.php";
     require_once "api/src/routes/Router.php";
+    require_once "api/src/controllers/AlunoControl.php";
+    require_once "api/src/middleware/AlunoMiddleware.php";
     
 class Roteador{
     public function __construct(
@@ -21,14 +23,13 @@ class Roteador{
     private function setupAlunosRoutes():void{
         $this->router->get(pattern:'/alunos',fn: function():never{
             try{
-                require_once "api/src/db/Database.php";
-                $query = "select now() as momento";
-                $statement = Database::getConnection()->prepare(query:$query);
-                $statement->execute();
-                $stdLinha = $statement->fetch(mode:PDO::FETCH_OBJ);
+                if(isset($_GET['page']) && isset($_GET['limit'])){
 
-                echo json_encode(value:$stdLinha);
-            
+                }else{
+
+                    (new AlunoControl())->index();
+                }
+
             }catch(Throwable $throwable){
                 $this->sendErrorResponse(throwable: $throwable, message:'Erro na seleção de alunos');
             };
@@ -36,7 +37,12 @@ class Roteador{
         });
         $this->router->get(pattern:'/alunos/(\d+)',fn: function($idAluno):never{
             try{
-                echo $idAluno;
+                $alunoMiddleware = new AlunoMiddleware();
+                $alunoMiddleware->isValidId(idAluno:$idAluno);
+
+                (new AlunoControl())
+                    ->show(idAluno:$idAluno);
+                    
             }catch(Throwable $throwable){
                 $this->sendErrorResponse(throwable: $throwable, message:'Erro na seleção de alunos');
             };
@@ -45,7 +51,19 @@ class Roteador{
         $this->router->post(pattern:'/alunos',fn: function():never{
             try{
                 $requestBody = file_get_contents(filename:'php://input' );
-                echo"recebeu o texto json com sucsso: $requestBody";
+                
+                $alunoMiddleware = new AlunoMiddleware();
+                $objStd = $alunoMiddleware->stringJsonToStdClass(requestbody:$requestBody);
+                
+                
+                $alunoMiddleware
+                    ->isValidNomeAluno(nomeAluno:$objStd->aluno->nomeAluno)
+                    ->hasNotAlunoByName(nomeAluno:$objStd->aluno->nomeAluno);
+                    
+                $alunoControl = new AlunoControl();
+                $alunoControl->store($objStd);
+                
+                
             }catch(Throwable $throwable){
                 $this->sendErrorResponse(throwable: $throwable, message:'Erro na seleção de alunos');
             };
@@ -172,7 +190,7 @@ class Roteador{
             success:false,
             message: $message,
             error:[
-                'problemCode' => $throwable->getCode(),
+                'code' => $throwable->getCode(),
                 'message' => $throwable->getMessage()
             ],
             httpCode:500
@@ -186,7 +204,7 @@ class Roteador{
             success:false,
             message: "Rota não encontrada",
             error:[
-                'problemCode' => 'rouring_error',
+                'code' => 'rouring_error',
                 'message' => 'rota não Mapeada'
             ],
             httpCode:404
