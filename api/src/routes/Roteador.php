@@ -3,7 +3,9 @@
     require_once "api/src/http/Response.php";
     require_once "api/src/routes/Router.php";
     require_once "api/src/controllers/AlunoControl.php";
+    require_once "api/src/controllers/ProfessorControl.php";
     require_once "api/src/middleware/AlunoMiddleware.php";
+    require_once "api/src/middleware/ProfessorMiddleware.php";
     
 class Roteador{
     public function __construct(
@@ -69,18 +71,32 @@ class Roteador{
             };
             exit();
         });
+        // [Roteador] >> Middleware's >> Controlers >> DAO
         $this->router->put(pattern:'/alunos/(\d+)',fn: function($idAluno):never{
             try{
-                echo $idAluno;
-            
+                $requestBody = file_get_contents(filename:'php://input' );
+                $alunoMiddleware = new AlunoMiddleware();
+                $stdAluno = $alunoMiddleware->stringJsonToStdClass($requestBody);
+                $alunoMiddleware    
+                    ->isValidId(idAluno: $idAluno)
+                    ->hasNotAlunoByName(nomeAluno:$stdAluno->aluno->nomeAluno);
+                
+                $stdAluno->aluno->idAluno = $idAluno;
+
+                $alunoControl = new AlunoControl();
+                $alunoControl->edit(stdAluno:$stdAluno);
             }catch(Throwable $throwable){
-                $this->sendErrorResponse(throwable: $throwable, message:'Erro na seleção de alunos');
+                $this->sendErrorResponse(throwable: $throwable, message:'Erro na atualização de alunos');
             };
             exit();
         });
         $this->router->delete(pattern:'/alunos/(\d+)',fn: function($idAluno):never{
             try{
-                echo $idAluno;
+                $alunoMiddleware = new AlunoMiddleware();
+                $alunoMiddleware->isValidId(idAluno:$idAluno);
+
+                $alunoControl = new AlunoControl();
+                $alunoControl->destroy(idAluno:$idAluno);
                 
             }catch(Throwable $throwable){
                 $this->sendErrorResponse(throwable: $throwable, message:'Erro na seleção de alunos');
@@ -92,7 +108,13 @@ class Roteador{
     private function setupProfessoresRoutes():void{
         $this->router->get(pattern:'/professores',fn: function():never{
             try{
-                
+                if(isset($_GET['page']) && isset($_GET['limit'])){
+
+                }else{
+
+                    (new ProfessorControl())->index();
+                }
+
             }catch(Throwable $throwable){
                 $this->sendErrorResponse(throwable: $throwable, message:'Erro na seleção de professores');
             };
@@ -100,17 +122,33 @@ class Roteador{
         });
         $this->router->get(pattern:'/professores/(\d+)',fn: function($idProfessor):never{
             try{
-                echo $idProfessor;
-                
+                $professorMiddleware = new ProfessorMiddleware();
+                $professorMiddleware->isValidId(idProfessor:$idProfessor);
+
+                (new ProfessorControl())
+                    ->show(idProfessor:$idProfessor);
+                    
             }catch(Throwable $throwable){
-                $this->sendErrorResponse(throwable: $throwable, message:'Erro na seleção de professores');
+                $this->sendErrorResponse(throwable: $throwable, message:'Erro na seleção de professor');
             };
             exit();
         });
         $this->router->post(pattern:'/professores',fn: function():never{
             try{
                 $requestBody = file_get_contents(filename:'php://input' );
-                echo"recebeu o texto json com sucsso: $requestBody";
+                
+                $professorMiddleware = new ProfessorMiddleware();
+                $objStd = $professorMiddleware->stringJsonToStdClass(requestbody:$requestBody);
+                
+                
+                $professorMiddleware
+                    ->isValidNomeProfessor(nomeProfessor:$objStd->professor->nomeProfessor)
+                    ->isValidValeAlimentacao(valeAlimentacao:$objStd->professor->valeAlimentacao)
+                    ->hasNotProfessorByName(nomeProfessor:$objStd->professor->nomeProfessor);
+                    
+                $professorControl = new ProfessorControl();
+                $professorControl->store($objStd);
+                
                 
             }catch(Throwable $throwable){
                 $this->sendErrorResponse(throwable: $throwable, message:'Erro na seleção de professores');
@@ -119,19 +157,32 @@ class Roteador{
         });
         $this->router->put(pattern:'/professores/(\d+)',fn: function($idProfessor):never{
             try{
-                echo $idProfessor;
+                $requestBody = file_get_contents(filename:'php://input' );
+                $professorMiddleware = new ProfessorMiddleware();
+                $stdProfessor = $professorMiddleware->stringJsonToStdClass($requestBody);
+                $professorMiddleware    
+                    ->isValidId(idProfessor: $idProfessor)
+                    ->hasNotProfessorByName(nomeProfessor:$stdProfessor->professor->nomeProfessor);
                 
+                $stdProfessor->professor->idProfessor = $idProfessor;
+
+                $professorControl = new ProfessorControl();
+                $professorControl->edit(stdProfessor:$stdProfessor);
             }catch(Throwable $throwable){
-                $this->sendErrorResponse(throwable: $throwable, message:'Erro na seleção de professores');
+                $this->sendErrorResponse(throwable: $throwable, message:'Erro na atualização de professor');
             };
             exit();
         });
         $this->router->delete(pattern:'/professores/(\d+)',fn: function($idProfessor):never{
             try{
-                echo $idProfessor;
+                $professorMiddleware = new ProfessorMiddleware();
+                $professorMiddleware->isValidId(idProfessor:$idProfessor);
+
+                $professorControl = new ProfessorControl();
+                $professorControl->destroy(idProfessor:$idProfessor);
                 
             }catch(Throwable $throwable){
-                $this->sendErrorResponse(throwable: $throwable, message:'Erro na seleção de professores');
+                $this->sendErrorResponse(throwable: $throwable, message:'Erro na seleção de professor');
             };
             exit();
         });

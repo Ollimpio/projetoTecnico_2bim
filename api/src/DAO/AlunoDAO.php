@@ -2,6 +2,7 @@
     require_once "api/src/db/Database.php";
     require_once "api/src/models/Aluno.php";
     class AlunoDAO{
+        // Roteador >> Middleware's >> Controlers >> [DAO]
         public function readAll():array {
             $resultados = [];
             $query = 'SELECT
@@ -45,7 +46,6 @@
         }
 
         public function readByName(string $nomeAluno):Aluno|null {
-            $resultados = [];
             $query =
             'SELECT
             id_aluno,
@@ -56,16 +56,15 @@
 
             $statement = Database::getConnection()->prepare(query: $query);
             $statement->execute(
-                params: [':nomeAluno' => (int) $nomeAluno]
+                params: [':nomeAluno' => $nomeAluno]
             );
-            // $stdClass = $statement->fetch(mode:PDO::FETCH_OBJ);
+            
             $objStdAluno = $statement->fetch(mode:PDO::FETCH_OBJ);
 
-            if (! $objStdAluno){
+            if (!$objStdAluno){
                 return null;
             }
-            
-            
+ 
             return (new Aluno())
                 ->setIdAluno(idAluno: $objStdAluno->id_aluno)
                 ->setNomeAluno(nomeAluno: $objStdAluno->nome);
@@ -87,4 +86,32 @@
             return $aluno;
         }
 
+        public function update(Aluno $aluno):bool{
+            $query =
+            'UPDATE aluno
+            SET nome = :novoNomeAluno
+            WHERE id_aluno = :idAluno;
+            ';
+              $statement = Database::getConnection()->prepare(query: $query);
+            $statement->execute(
+                params: [':novoNomeAluno' => $aluno->getNomeAluno(),
+                ':idAluno' => $aluno->getIdAluno()
+            ]);
+
+            return $statement->rowCount() >0;
+        }
+
+        public function delete(int $idAluno):bool{
+            $query =
+                'DELETE FROM aluno
+                WHERE id_aluno = :idAluno;
+                ';
+              $statement = Database::getConnection()->prepare(query: $query);
+            $statement->execute(
+                params: [
+                ':idAluno' => $idAluno
+            ]);
+
+            return $statement->rowCount() >0;
+        }
     }

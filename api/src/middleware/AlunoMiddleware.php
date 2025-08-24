@@ -2,7 +2,7 @@
     require_once "api/src/http/Response.php";
     require_once "api/src/DAO/AlunoDAO.php";
     class AlunoMiddleware{
-
+        // Roteador >> [Middleware's] >> Controlers >> DAO
         public function stringJsonToStdClass($requestbody): stdClass{
             $stdAluno = json_decode(json: $requestbody);
             if (json_last_error() !== JSON_ERROR_NONE){
@@ -76,8 +76,7 @@
 
             $alunoDao = new AlunoDAO();
             $aluno = $alunoDao->readByName(nomeAluno:$nomeAluno);
-            if(!isset($aluno)){
-                
+            if(isset($aluno)){
                 (new Response(
                         success: false,
                         message: 'Aluno inválido',

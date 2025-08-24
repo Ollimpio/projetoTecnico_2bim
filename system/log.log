@@ -262,3 +262,133 @@ Trace: #0 C:\xampp\htdocs\2bim\api\src\DAO\AlunoDAO.php(83): Aluno->getNomeAluno
 #7 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
 #8 {main} 
  ****************************************************************************************************
+[2025-08-15 21:20:19.000] [Throwable] 
+ 
+Throwable trown 
+Message: Aluno::getIdAluno(): Return value must be of type int, null returned
+Code: 0
+File: C:\xampp\htdocs\2bim\api\src\models\Aluno.php
+Line: 21
+Trace: #0 C:\xampp\htdocs\2bim\api\src\DAO\AlunoDAO.php(97): Aluno->getIdAluno()
+#1 C:\xampp\htdocs\2bim\api\src\controllers\AlunoControl.php(58): AlunoDAO->update(Object(Aluno))
+#2 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(85): AlunoControl->edit(Object(stdClass))
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}('6')
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#6 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(227): Router->run()
+#7 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#8 {main} 
+ ****************************************************************************************************
+[2025-08-16 00:46:07.000] [Throwable] 
+ 
+Throwable trown 
+Message: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id_alauno' in 'field list'
+Code: 42S22
+File: C:\xampp\htdocs\2bim\api\src\DAO\AlunoDAO.php
+Line: 15
+Trace: #0 C:\xampp\htdocs\2bim\api\src\DAO\AlunoDAO.php(15): PDO->query('SELECT\n        ...')
+#1 C:\xampp\htdocs\2bim\api\src\controllers\AlunoControl.php(8): AlunoDAO->readAll()
+#2 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(30): AlunoControl->index()
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#6 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(231): Router->run()
+#7 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#8 {main} 
+ ****************************************************************************************************
+[2025-08-20 23:14:40.000] [Throwable] 
+ 
+Throwable trown 
+Message: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nome' in 'field list'
+Code: 42S22
+File: C:\xampp\htdocs\2bim\api\src\DAO\ProfessorDAO.php
+Line: 15
+Trace: #0 C:\xampp\htdocs\2bim\api\src\DAO\ProfessorDAO.php(15): PDO->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\2bim\api\src\controllers\ProfessorControl.php(8): ProfessorDAO->readAll()
+#2 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(115): ProfessorControl->index()
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#6 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(239): Router->run()
+#7 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#8 {main} 
+ ****************************************************************************************************
+[2025-08-20 23:16:31.000] [Throwable] 
+ 
+Throwable trown 
+Message: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nome' in 'field list'
+Code: 42S22
+File: C:\xampp\htdocs\2bim\api\src\DAO\ProfessorDAO.php
+Line: 15
+Trace: #0 C:\xampp\htdocs\2bim\api\src\DAO\ProfessorDAO.php(15): PDO->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\2bim\api\src\controllers\ProfessorControl.php(8): ProfessorDAO->readAll()
+#2 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(115): ProfessorControl->index()
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#6 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(239): Router->run()
+#7 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#8 {main} 
+ ****************************************************************************************************
+[2025-08-24 02:09:24.000] [Throwable] 
+ 
+Throwable trown 
+Message: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nome' in 'where clause'
+Code: 42S22
+File: C:\xampp\htdocs\2bim\api\src\DAO\ProfessorDAO.php
+Line: 58
+Trace: #0 C:\xampp\htdocs\2bim\api\src\DAO\ProfessorDAO.php(58): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\2bim\api\src\middleware\ProfessorMiddleware.php(106): ProfessorDAO->readByName('ProfTeste')
+#2 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(147): ProfessorMiddleware->hasNotProfessorByName('ProfTeste')
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#6 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(268): Router->run()
+#7 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#8 {main} 
+ ****************************************************************************************************
+[2025-08-24 02:10:49.000] [Throwable] 
+ 
+Throwable trown 
+Message: Professor::getNomeProfessor(): Return value must be of type string, null returned
+Code: 0
+File: C:\xampp\htdocs\2bim\api\src\models\Professor.php
+Line: 28
+Trace: #0 C:\xampp\htdocs\2bim\api\src\DAO\ProfessorDAO.php(82): Professor->getNomeProfessor()
+#1 C:\xampp\htdocs\2bim\api\src\controllers\ProfessorControl.php(40): ProfessorDAO->create(Object(Professor))
+#2 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(150): ProfessorControl->store(Object(stdClass))
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#6 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(268): Router->run()
+#7 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#8 {main} 
+ ****************************************************************************************************
+[2025-08-24 02:17:58.000] [Throwable] 
+ 
+Throwable trown 
+Message: Attempt to assign property "idprofessor" on null
+Code: 0
+File: C:\xampp\htdocs\2bim\api\src\routes\Roteador.php
+Line: 167
+Trace: #0 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}('2')
+#1 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#3 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(268): Router->run()
+#4 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#5 {main} 
+ ****************************************************************************************************
+[2025-08-24 02:18:41.000] [Throwable] 
+ 
+Throwable trown 
+Message: Attempt to assign property "idProfessor" on null
+Code: 0
+File: C:\xampp\htdocs\2bim\api\src\routes\Roteador.php
+Line: 167
+Trace: #0 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}('2')
+#1 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#3 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(268): Router->run()
+#4 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#5 {main} 
+ ****************************************************************************************************
