@@ -392,3 +392,557 @@ Trace: #0 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closur
 #4 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
 #5 {main} 
  ****************************************************************************************************
+[2025-08-24 17:02:04.000] [Throwable] 
+ 
+Throwable trown 
+Message: Class "DisciplinaControl" not found
+Code: 0
+File: C:\xampp\htdocs\2bim\api\src\routes\Roteador.php
+Line: 223
+Trace: #0 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#1 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#3 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(281): Router->run()
+#4 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#5 {main} 
+ ****************************************************************************************************
+[2025-08-24 17:03:21.000] [Throwable] 
+ 
+Throwable trown 
+Message: Class "DisciplinaControl" not found
+Code: 0
+File: C:\xampp\htdocs\2bim\api\src\routes\Roteador.php
+Line: 223
+Trace: #0 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#1 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#3 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(281): Router->run()
+#4 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#5 {main} 
+ ****************************************************************************************************
+[2025-08-24 17:04:02.000] [Throwable] 
+ 
+Throwable trown 
+Message: Disciplina::setAluno(): Argument #1 ($aluno) must be of type ?Aluno, stdClass given, called in C:\xampp\htdocs\2bim\api\src\controllers\DisciplinaControl.php on line 9
+Code: 0
+File: C:\xampp\htdocs\2bim\api\src\models\Disciplina.php
+Line: 70
+Trace: #0 C:\xampp\htdocs\2bim\api\src\controllers\DisciplinaControl.php(9): Disciplina->setAluno(Object(stdClass))
+#1 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(225): DisciplinaControl->store(Object(stdClass))
+#2 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(282): Router->run()
+#6 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#7 {main} 
+ ****************************************************************************************************
+[2025-08-24 17:05:52.000] [Throwable] 
+ 
+Throwable trown 
+Message: Disciplina::setAluno(): Argument #1 ($aluno) must be of type ?Aluno, stdClass given, called in C:\xampp\htdocs\2bim\api\src\controllers\DisciplinaControl.php on line 9
+Code: 0
+File: C:\xampp\htdocs\2bim\api\src\models\Disciplina.php
+Line: 70
+Trace: #0 C:\xampp\htdocs\2bim\api\src\controllers\DisciplinaControl.php(9): Disciplina->setAluno(Object(stdClass))
+#1 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(225): DisciplinaControl->store(Object(stdClass))
+#2 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(282): Router->run()
+#6 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#7 {main} 
+ ****************************************************************************************************
+[2025-08-24 17:09:47.000] [Throwable] 
+ 
+Throwable trown 
+Message: Disciplina::setProfessor(): Argument #1 ($professor) must be of type ?Professor, stdClass given, called in C:\xampp\htdocs\2bim\api\src\controllers\DisciplinaControl.php on line 10
+Code: 0
+File: C:\xampp\htdocs\2bim\api\src\models\Disciplina.php
+Line: 81
+Trace: #0 C:\xampp\htdocs\2bim\api\src\controllers\DisciplinaControl.php(10): Disciplina->setProfessor(Object(stdClass))
+#1 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(225): DisciplinaControl->store(Object(stdClass))
+#2 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(282): Router->run()
+#6 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#7 {main} 
+ ****************************************************************************************************
+[2025-08-24 17:13:16.000] [Throwable] 
+ 
+Throwable trown 
+Message: Aluno::setIdAluno(): Argument #1 ($idAluno) must be of type ?int, stdClass given, called in C:\xampp\htdocs\2bim\api\src\controllers\DisciplinaControl.php on line 9
+Code: 0
+File: C:\xampp\htdocs\2bim\api\src\models\Aluno.php
+Line: 23
+Trace: #0 C:\xampp\htdocs\2bim\api\src\controllers\DisciplinaControl.php(9): Aluno->setIdAluno(Object(stdClass))
+#1 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(225): DisciplinaControl->store(Object(stdClass))
+#2 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(282): Router->run()
+#6 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#7 {main} 
+ ****************************************************************************************************
+[2025-08-24 17:15:00.000] [Throwable] 
+ 
+Throwable trown 
+Message: Aluno::setIdAluno(): Argument #1 ($idAluno) must be of type ?int, stdClass given, called in C:\xampp\htdocs\2bim\api\src\controllers\DisciplinaControl.php on line 9
+Code: 0
+File: C:\xampp\htdocs\2bim\api\src\models\Aluno.php
+Line: 23
+Trace: #0 C:\xampp\htdocs\2bim\api\src\controllers\DisciplinaControl.php(9): Aluno->setIdAluno(Object(stdClass))
+#1 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(225): DisciplinaControl->store(Object(stdClass))
+#2 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(282): Router->run()
+#6 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#7 {main} 
+ ****************************************************************************************************
+[2025-08-24 17:15:35.000] [Throwable] 
+ 
+Throwable trown 
+Message: Professor::setIdProfessor(): Argument #1 ($idProfessor) must be of type ?int, stdClass given, called in C:\xampp\htdocs\2bim\api\src\controllers\DisciplinaControl.php on line 10
+Code: 0
+File: C:\xampp\htdocs\2bim\api\src\models\Professor.php
+Line: 23
+Trace: #0 C:\xampp\htdocs\2bim\api\src\controllers\DisciplinaControl.php(10): Professor->setIdProfessor(Object(stdClass))
+#1 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(225): DisciplinaControl->store(Object(stdClass))
+#2 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(282): Router->run()
+#6 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#7 {main} 
+ ****************************************************************************************************
+[2025-08-24 17:15:49.000] [Throwable] 
+ 
+Throwable trown 
+Message: Class "DisciplinaDAO" not found
+Code: 0
+File: C:\xampp\htdocs\2bim\api\src\controllers\DisciplinaControl.php
+Line: 12
+Trace: #0 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(225): DisciplinaControl->store(Object(stdClass))
+#1 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#2 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#4 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(282): Router->run()
+#5 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#6 {main} 
+ ****************************************************************************************************
+[2025-08-24 17:16:51.000] [Throwable] 
+ 
+Throwable trown 
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 4
+Code: 42000
+File: C:\xampp\htdocs\2bim\api\src\DAO\DisciplinaDAO.php
+Line: 15
+Trace: #0 C:\xampp\htdocs\2bim\api\src\DAO\DisciplinaDAO.php(15): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\2bim\api\src\controllers\DisciplinaControl.php(15): DisciplinaDAO->create(Object(Disciplina))
+#2 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(225): DisciplinaControl->store(Object(stdClass))
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#6 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(282): Router->run()
+#7 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#8 {main} 
+ ****************************************************************************************************
+[2025-08-24 17:18:10.000] [Throwable] 
+ 
+Throwable trown 
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 4
+Code: 42000
+File: C:\xampp\htdocs\2bim\api\src\DAO\DisciplinaDAO.php
+Line: 15
+Trace: #0 C:\xampp\htdocs\2bim\api\src\DAO\DisciplinaDAO.php(15): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\2bim\api\src\controllers\DisciplinaControl.php(15): DisciplinaDAO->create(Object(Disciplina))
+#2 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(225): DisciplinaControl->store(Object(stdClass))
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#6 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(282): Router->run()
+#7 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#8 {main} 
+ ****************************************************************************************************
+[2025-08-24 17:27:57.000] [Throwable] 
+ 
+Throwable trown 
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 4
+Code: 42000
+File: C:\xampp\htdocs\2bim\api\src\DAO\DisciplinaDAO.php
+Line: 15
+Trace: #0 C:\xampp\htdocs\2bim\api\src\DAO\DisciplinaDAO.php(15): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\2bim\api\src\controllers\DisciplinaControl.php(15): DisciplinaDAO->create(Object(Disciplina))
+#2 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(225): DisciplinaControl->store(Object(stdClass))
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#6 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(282): Router->run()
+#7 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#8 {main} 
+ ****************************************************************************************************
+[2025-08-24 17:29:00.000] [Throwable] 
+ 
+Throwable trown 
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 4
+Code: 42000
+File: C:\xampp\htdocs\2bim\api\src\DAO\DisciplinaDAO.php
+Line: 15
+Trace: #0 C:\xampp\htdocs\2bim\api\src\DAO\DisciplinaDAO.php(15): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\2bim\api\src\controllers\DisciplinaControl.php(15): DisciplinaDAO->create(Object(Disciplina))
+#2 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(225): DisciplinaControl->store(Object(stdClass))
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#6 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(282): Router->run()
+#7 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#8 {main} 
+ ****************************************************************************************************
+[2025-08-24 18:34:56.000] [Throwable] 
+ 
+Throwable trown 
+Message: DisciplinaDAO::readByName(): Return value must be of type Disciplina|array, bool returned
+Code: 0
+File: C:\xampp\htdocs\2bim\api\src\DAO\DisciplinaDAO.php
+Line: 21
+Trace: #0 C:\xampp\htdocs\2bim\api\src\middleware\DisciplinaMiddleware.php(263): DisciplinaDAO->readByName('PAW2')
+#1 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(220): DisciplinaMiddleware->hasNotDisciplinaByName('PAW2')
+#2 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(285): Router->run()
+#6 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#7 {main} 
+ ****************************************************************************************************
+[2025-08-24 18:49:24.000] [Throwable] 
+ 
+Throwable trown 
+Message: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`projeto_web`.`disciplina`, CONSTRAINT `disciplina_ibfk_1` FOREIGN KEY (`id_professor`) REFERENCES `professor` (`id_professor`))
+Code: 23000
+File: C:\xampp\htdocs\2bim\api\src\DAO\DisciplinaDAO.php
+Line: 32
+Trace: #0 C:\xampp\htdocs\2bim\api\src\DAO\DisciplinaDAO.php(32): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\2bim\api\src\controllers\DisciplinaControl.php(15): DisciplinaDAO->create(Object(Disciplina))
+#2 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(231): DisciplinaControl->store(Object(stdClass))
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#6 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(290): Router->run()
+#7 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#8 {main} 
+ ****************************************************************************************************
+[2025-08-24 18:53:18.000] [Throwable] 
+ 
+Throwable trown 
+Message: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`projeto_web`.`disciplina`, CONSTRAINT `disciplina_ibfk_1` FOREIGN KEY (`id_professor`) REFERENCES `professor` (`id_professor`))
+Code: 23000
+File: C:\xampp\htdocs\2bim\api\src\DAO\DisciplinaDAO.php
+Line: 32
+Trace: #0 C:\xampp\htdocs\2bim\api\src\DAO\DisciplinaDAO.php(32): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\2bim\api\src\controllers\DisciplinaControl.php(15): DisciplinaDAO->create(Object(Disciplina))
+#2 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(231): DisciplinaControl->store(Object(stdClass))
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#6 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(290): Router->run()
+#7 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#8 {main} 
+ ****************************************************************************************************
+[2025-08-24 18:54:27.000] [Throwable] 
+ 
+Throwable trown 
+Message: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`projeto_web`.`disciplina`, CONSTRAINT `disciplina_ibfk_1` FOREIGN KEY (`id_professor`) REFERENCES `professor` (`id_professor`))
+Code: 23000
+File: C:\xampp\htdocs\2bim\api\src\DAO\DisciplinaDAO.php
+Line: 32
+Trace: #0 C:\xampp\htdocs\2bim\api\src\DAO\DisciplinaDAO.php(32): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\2bim\api\src\controllers\DisciplinaControl.php(15): DisciplinaDAO->create(Object(Disciplina))
+#2 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(231): DisciplinaControl->store(Object(stdClass))
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#6 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(290): Router->run()
+#7 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#8 {main} 
+ ****************************************************************************************************
+[2025-08-24 18:56:00.000] [Throwable] 
+ 
+Throwable trown 
+Message: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`projeto_web`.`disciplina`, CONSTRAINT `disciplina_ibfk_1` FOREIGN KEY (`id_professor`) REFERENCES `professor` (`id_professor`))
+Code: 23000
+File: C:\xampp\htdocs\2bim\api\src\DAO\DisciplinaDAO.php
+Line: 32
+Trace: #0 C:\xampp\htdocs\2bim\api\src\DAO\DisciplinaDAO.php(32): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\2bim\api\src\controllers\DisciplinaControl.php(15): DisciplinaDAO->create(Object(Disciplina))
+#2 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(231): DisciplinaControl->store(Object(stdClass))
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#6 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(290): Router->run()
+#7 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#8 {main} 
+ ****************************************************************************************************
+[2025-08-24 19:56:52.000] [Throwable] 
+ 
+Throwable trown 
+Message: Unknown named parameter $nomeDisciplina
+Code: 0
+File: C:\xampp\htdocs\2bim\api\src\controllers\DisciplinaControl.php
+Line: 8
+Trace: #0 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(197): DisciplinaControl->index()
+#1 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#2 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#4 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(292): Router->run()
+#5 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#6 {main} 
+ ****************************************************************************************************
+[2025-08-24 19:57:14.000] [Throwable] 
+ 
+Throwable trown 
+Message: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id_professor' in field list is ambiguous
+Code: 23000
+File: C:\xampp\htdocs\2bim\api\src\DAO\DisciplinaDAO.php
+Line: 17
+Trace: #0 C:\xampp\htdocs\2bim\api\src\DAO\DisciplinaDAO.php(17): PDO->query('SELECT \r\n      ...')
+#1 C:\xampp\htdocs\2bim\api\src\controllers\DisciplinaControl.php(8): DisciplinaDAO->readAll()
+#2 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(197): DisciplinaControl->index()
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#6 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(292): Router->run()
+#7 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#8 {main} 
+ ****************************************************************************************************
+[2025-08-24 19:59:08.000] [Throwable] 
+ 
+Throwable trown 
+Message: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id_professor' in field list is ambiguous
+Code: 23000
+File: C:\xampp\htdocs\2bim\api\src\DAO\DisciplinaDAO.php
+Line: 17
+Trace: #0 C:\xampp\htdocs\2bim\api\src\DAO\DisciplinaDAO.php(17): PDO->query('SELECT \r\n      ...')
+#1 C:\xampp\htdocs\2bim\api\src\controllers\DisciplinaControl.php(8): DisciplinaDAO->readAll()
+#2 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(197): DisciplinaControl->index()
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#6 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(292): Router->run()
+#7 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#8 {main} 
+ ****************************************************************************************************
+[2025-08-24 19:59:26.000] [Throwable] 
+ 
+Throwable trown 
+Message: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id_professor' in field list is ambiguous
+Code: 23000
+File: C:\xampp\htdocs\2bim\api\src\DAO\DisciplinaDAO.php
+Line: 17
+Trace: #0 C:\xampp\htdocs\2bim\api\src\DAO\DisciplinaDAO.php(17): PDO->query('SELECT \r\n      ...')
+#1 C:\xampp\htdocs\2bim\api\src\controllers\DisciplinaControl.php(8): DisciplinaDAO->readAll()
+#2 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(197): DisciplinaControl->index()
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#6 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(292): Router->run()
+#7 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#8 {main} 
+ ****************************************************************************************************
+[2025-08-24 20:01:00.000] [Throwable] 
+ 
+Throwable trown 
+Message: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id_professor' in field list is ambiguous
+Code: 23000
+File: C:\xampp\htdocs\2bim\api\src\DAO\DisciplinaDAO.php
+Line: 17
+Trace: #0 C:\xampp\htdocs\2bim\api\src\DAO\DisciplinaDAO.php(17): PDO->query('SELECT \r\n      ...')
+#1 C:\xampp\htdocs\2bim\api\src\controllers\DisciplinaControl.php(8): DisciplinaDAO->readAll()
+#2 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(197): DisciplinaControl->index()
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#6 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(292): Router->run()
+#7 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#8 {main} 
+ ****************************************************************************************************
+[2025-08-24 20:20:53.000] [Throwable] 
+ 
+Throwable trown 
+Message: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'aluno.nome_aluno' in 'field list'
+Code: 42S22
+File: C:\xampp\htdocs\2bim\api\src\DAO\DisciplinaDAO.php
+Line: 23
+Trace: #0 C:\xampp\htdocs\2bim\api\src\DAO\DisciplinaDAO.php(23): PDO->query('SELECT \r\n      ...')
+#1 C:\xampp\htdocs\2bim\api\src\controllers\DisciplinaControl.php(8): DisciplinaDAO->readAll()
+#2 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(197): DisciplinaControl->index()
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#6 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(292): Router->run()
+#7 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#8 {main} 
+ ****************************************************************************************************
+[2025-08-24 20:21:32.000] [Throwable] 
+ 
+Throwable trown 
+Message: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'aluno.nome_aluno' in 'field list'
+Code: 42S22
+File: C:\xampp\htdocs\2bim\api\src\DAO\DisciplinaDAO.php
+Line: 23
+Trace: #0 C:\xampp\htdocs\2bim\api\src\DAO\DisciplinaDAO.php(23): PDO->query('SELECT \r\n      ...')
+#1 C:\xampp\htdocs\2bim\api\src\controllers\DisciplinaControl.php(8): DisciplinaDAO->readAll()
+#2 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(197): DisciplinaControl->index()
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#6 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(292): Router->run()
+#7 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#8 {main} 
+ ****************************************************************************************************
+[2025-08-24 20:21:34.000] [Throwable] 
+ 
+Throwable trown 
+Message: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'aluno.nome_aluno' in 'field list'
+Code: 42S22
+File: C:\xampp\htdocs\2bim\api\src\DAO\DisciplinaDAO.php
+Line: 23
+Trace: #0 C:\xampp\htdocs\2bim\api\src\DAO\DisciplinaDAO.php(23): PDO->query('SELECT \r\n      ...')
+#1 C:\xampp\htdocs\2bim\api\src\controllers\DisciplinaControl.php(8): DisciplinaDAO->readAll()
+#2 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(197): DisciplinaControl->index()
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#6 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(292): Router->run()
+#7 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#8 {main} 
+ ****************************************************************************************************
+[2025-08-24 20:22:35.000] [Throwable] 
+ 
+Throwable trown 
+Message: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'professor.nome' in 'field list'
+Code: 42S22
+File: C:\xampp\htdocs\2bim\api\src\DAO\DisciplinaDAO.php
+Line: 23
+Trace: #0 C:\xampp\htdocs\2bim\api\src\DAO\DisciplinaDAO.php(23): PDO->query('SELECT \r\n      ...')
+#1 C:\xampp\htdocs\2bim\api\src\controllers\DisciplinaControl.php(8): DisciplinaDAO->readAll()
+#2 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(197): DisciplinaControl->index()
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}()
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#6 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(292): Router->run()
+#7 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#8 {main} 
+ ****************************************************************************************************
+[2025-08-24 20:52:59.000] [Throwable] 
+ 
+Throwable trown 
+Message: Aluno::getIdAluno(): Return value must be of type int, null returned
+Code: 0
+File: C:\xampp\htdocs\2bim\api\src\models\Aluno.php
+Line: 21
+Trace: #0 C:\xampp\htdocs\2bim\api\src\models\Disciplina.php(23): Aluno->getIdAluno()
+#1 [internal function]: Disciplina->jsonSerialize()
+#2 C:\xampp\htdocs\2bim\api\src\http\Response.php(36): json_encode(Object(Response))
+#3 C:\xampp\htdocs\2bim\api\src\controllers\DisciplinaControl.php(66): Response->send()
+#4 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(258): DisciplinaControl->edit(Object(stdClass))
+#5 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}('10')
+#6 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#7 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#8 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(306): Router->run()
+#9 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#10 {main} 
+ ****************************************************************************************************
+[2025-08-24 20:54:54.000] [Throwable] 
+ 
+Throwable trown 
+Message: Aluno::getIdAluno(): Return value must be of type int, null returned
+Code: 0
+File: C:\xampp\htdocs\2bim\api\src\models\Aluno.php
+Line: 21
+Trace: #0 C:\xampp\htdocs\2bim\api\src\models\Disciplina.php(23): Aluno->getIdAluno()
+#1 [internal function]: Disciplina->jsonSerialize()
+#2 C:\xampp\htdocs\2bim\api\src\http\Response.php(36): json_encode(Object(Response))
+#3 C:\xampp\htdocs\2bim\api\src\controllers\DisciplinaControl.php(66): Response->send()
+#4 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(258): DisciplinaControl->edit(Object(stdClass))
+#5 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}('10')
+#6 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#7 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#8 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(306): Router->run()
+#9 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#10 {main} 
+ ****************************************************************************************************
+[2025-08-24 20:55:16.000] [Throwable] 
+ 
+Throwable trown 
+Message: Aluno::getIdAluno(): Return value must be of type int, null returned
+Code: 0
+File: C:\xampp\htdocs\2bim\api\src\models\Aluno.php
+Line: 21
+Trace: #0 C:\xampp\htdocs\2bim\api\src\models\Disciplina.php(23): Aluno->getIdAluno()
+#1 [internal function]: Disciplina->jsonSerialize()
+#2 C:\xampp\htdocs\2bim\api\src\http\Response.php(36): json_encode(Object(Response))
+#3 C:\xampp\htdocs\2bim\api\src\controllers\DisciplinaControl.php(66): Response->send()
+#4 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(258): DisciplinaControl->edit(Object(stdClass))
+#5 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}('10')
+#6 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#7 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#8 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(306): Router->run()
+#9 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#10 {main} 
+ ****************************************************************************************************
+[2025-08-24 20:58:46.000] [Throwable] 
+ 
+Throwable trown 
+Message: Aluno::getIdAluno(): Return value must be of type int, null returned
+Code: 0
+File: C:\xampp\htdocs\2bim\api\src\models\Aluno.php
+Line: 21
+Trace: #0 C:\xampp\htdocs\2bim\api\src\models\Disciplina.php(23): Aluno->getIdAluno()
+#1 [internal function]: Disciplina->jsonSerialize()
+#2 C:\xampp\htdocs\2bim\api\src\http\Response.php(36): json_encode(Object(Response))
+#3 C:\xampp\htdocs\2bim\api\src\controllers\DisciplinaControl.php(66): Response->send()
+#4 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(258): DisciplinaControl->edit(Object(stdClass))
+#5 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}('10')
+#6 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#7 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#8 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(306): Router->run()
+#9 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#10 {main} 
+ ****************************************************************************************************
+[2025-08-24 20:58:59.000] [Throwable] 
+ 
+Throwable trown 
+Message: Aluno::getIdAluno(): Return value must be of type int, null returned
+Code: 0
+File: C:\xampp\htdocs\2bim\api\src\models\Aluno.php
+Line: 21
+Trace: #0 C:\xampp\htdocs\2bim\api\src\models\Disciplina.php(23): Aluno->getIdAluno()
+#1 [internal function]: Disciplina->jsonSerialize()
+#2 C:\xampp\htdocs\2bim\api\src\http\Response.php(36): json_encode(Object(Response))
+#3 C:\xampp\htdocs\2bim\api\src\controllers\DisciplinaControl.php(66): Response->send()
+#4 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(258): DisciplinaControl->edit(Object(stdClass))
+#5 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}('10')
+#6 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#7 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#8 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(306): Router->run()
+#9 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#10 {main} 
+ ****************************************************************************************************
+[2025-08-24 21:31:12.000] [Throwable] 
+ 
+Throwable trown 
+Message: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'professor.nome' in 'field list'
+Code: 42S22
+File: C:\xampp\htdocs\2bim\api\src\DAO\DisciplinaDAO.php
+Line: 102
+Trace: #0 C:\xampp\htdocs\2bim\api\src\DAO\DisciplinaDAO.php(102): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\2bim\api\src\controllers\DisciplinaControl.php(41): DisciplinaDAO->readById(1)
+#2 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(209): DisciplinaControl->show(1)
+#3 C:\xampp\htdocs\2bim\api\src\routes\Router.php(459): Roteador->{closure}('1')
+#4 C:\xampp\htdocs\2bim\api\src\routes\Router.php(441): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\2bim\api\src\routes\Router.php(288): Router->handle(Array, true)
+#6 C:\xampp\htdocs\2bim\api\src\routes\Roteador.php(310): Router->run()
+#7 C:\xampp\htdocs\2bim\api.php(4): Roteador->start()
+#8 {main} 
+ ****************************************************************************************************

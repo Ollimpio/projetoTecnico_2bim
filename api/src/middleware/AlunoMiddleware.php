@@ -90,6 +90,24 @@
             }
             return $this;
         }
+        public function hasAlunoById($idAluno):self {
+
+            $alunoDao = new AlunoDAO();
+            $aluno = $alunoDao->readIdAndNomeById(idAluno:$idAluno);
+            if(empty($aluno)){
+                (new Response(
+                        success: false,
+                        message: 'Aluno inválido',
+                        error: [
+                            "code" => "validation_error",
+                            "message"=> "Não existe um aluno cadastrado com esse Id" 
+                        ],
+                        httpCode: 400
+                    ))->send();
+                    exit();
+            }
+            return $this;
+        }
         public function isValidId($idAluno):self {
             if(! isset($idAluno)){
                 (new Response(

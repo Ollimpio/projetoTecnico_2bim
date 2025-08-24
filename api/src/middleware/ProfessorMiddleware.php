@@ -118,6 +118,24 @@
             }
             return $this;
         }
+        public function hasProfessorById($idProfessor):self {
+
+            $ProfessorDao = new ProfessorDAO();
+            $Professor = $ProfessorDao->readById(idProfessor:$idProfessor);
+            if(empty($Professor)){
+                (new Response(
+                        success: false,
+                        message: 'Professor inválido',
+                        error: [
+                            "code" => "validation_error",
+                            "message"=> "Não existe um professor cadastrado com esse Id" 
+                        ],
+                        httpCode: 400
+                    ))->send();
+                    exit();
+            }
+            return $this;
+        }
         public function isValidId($idProfessor):self {
             if(! isset($idProfessor)){
                 (new Response(
@@ -131,7 +149,7 @@
                 ))->send();
                 exit();
             }
-            elseif(! is_numeric($idProfessor)){
+            elseif(!is_numeric($idProfessor)){
                 (new Response(
                     success: false,
                     message: 'Não foi possivel encontrar o Professor',
@@ -143,7 +161,7 @@
                 ))->send();
                 exit();
             }elseif($idProfessor < 0){
-                               (new Response(
+                (new Response(
                     success: false,
                     message: 'Não foi possivel encontrar o Professor',
                     error: [

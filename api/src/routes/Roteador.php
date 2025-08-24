@@ -4,8 +4,10 @@
     require_once "api/src/routes/Router.php";
     require_once "api/src/controllers/AlunoControl.php";
     require_once "api/src/controllers/ProfessorControl.php";
+    require_once "api/src/controllers/DisciplinaControl.php";
     require_once "api/src/middleware/AlunoMiddleware.php";
     require_once "api/src/middleware/ProfessorMiddleware.php";
+    require_once "api/src/middleware/DisciplinaMiddleware.php";
     
 class Roteador{
     public function __construct(
@@ -14,7 +16,7 @@ class Roteador{
         $this->setupHeader();
         $this->setupAlunosRoutes();
         $this->setupProfessoresRoutes();
-        $this->setupDiciplinasRoutes();
+        $this->setupDisciplinasRoutes();
         $this->setup404Routes();
     }
     private function setupHeader():void{
@@ -51,6 +53,13 @@ class Roteador{
             exit();
         });
         $this->router->post(pattern:'/alunos',fn: function():never{
+            /*
+            {
+            "aluno": {
+                    "nomeAluno": "teste"
+                }
+            }
+            */
             try{
                 $requestBody = file_get_contents(filename:'php://input' );
                 
@@ -74,6 +83,13 @@ class Roteador{
         // [Roteador] >> Middleware's >> Controlers >> DAO
         $this->router->put(pattern:'/alunos/(\d+)',fn: function($idAluno):never{
             try{
+                /*
+                {
+                "aluno":{
+                        "nomeAluno" : "Fabio"
+                    }
+                }
+                */
                 $requestBody = file_get_contents(filename:'php://input' );
                 $alunoMiddleware = new AlunoMiddleware();
                 $stdAluno = $alunoMiddleware->stringJsonToStdClass($requestBody);
@@ -135,6 +151,14 @@ class Roteador{
         });
         $this->router->post(pattern:'/professores',fn: function():never{
             try{
+                /*
+                {
+                "professor": {
+                        "nomeProfessor": "teste",
+                        "valeAlimentacao": 1200000
+                    }
+                }
+*/
                 $requestBody = file_get_contents(filename:'php://input' );
                 
                 $professorMiddleware = new ProfessorMiddleware();
@@ -157,6 +181,13 @@ class Roteador{
         });
         $this->router->put(pattern:'/professores/(\d+)',fn: function($idProfessor):never{
             try{
+                /*
+                {
+                "professor": {
+                    "nomeProfessor": "teste::",
+                    "valeAlimentacao": 2500
+                }
+}*/
                 $requestBody = file_get_contents(filename:'php://input' );
                 $professorMiddleware = new ProfessorMiddleware();
                 $stdProfessor = $professorMiddleware->stringJsonToStdClass($requestBody);
@@ -187,49 +218,113 @@ class Roteador{
             exit();
         });
     }
-    private function setupDiciplinasRoutes():void{ 
-        $this->router->get(pattern:'/diciplinas',fn: function():never{
+    private function setupDisciplinasRoutes():void{ 
+        $this->router->get(pattern:'/disciplinas',fn: function():never{
             try{
-                
+                // (new DisciplinaControl())->index();
+                $disciplinaControl = new DisciplinaControl();
+                $disciplinaControl->index();
             }catch(Throwable $throwable){
-                $this->sendErrorResponse(throwable: $throwable, message:'Erro na seleção de diciplinas');
+                $this->sendErrorResponse(throwable: $throwable, message:'Erro na seleção de disciplinas');
             };
             exit();
         });
-        $this->router->get(pattern:'/diciplinas/(\w+)',fn: function($nomeDiciplina):never{
+        $this->router->get(pattern:'/disciplinas/(\d+)',fn: function($idDisciplina):never{
             try{
-                echo $nomeDiciplina;
+                $disciplinaMiddleware = new DisciplinaMiddleware();
+                $disciplinaMiddleware->isValidId(idDisciplina:$idDisciplina);
+
+                (new DisciplinaControl())
+                    ->show(idDisciplina:$idDisciplina);
                 
             }catch(Throwable $throwable){
-                $this->sendErrorResponse(throwable: $throwable, message:'Erro na seleção de alunos');
+                $this->sendErrorResponse(throwable: $throwable, message:'Erro na seleção de disciplina');
             };
             exit();
         });
-        $this->router->post(pattern:'/diciplinas',fn: function():never{
+        $this->router->post(pattern:'/disciplinas',fn: function():never{
             try{
+                /*
+                {
+                    "professor": {
+                        "nomeProfessor": "teste::",
+                        "valeAlimentacao": 2500
+                    }
+                }
+                */
                 $requestBody = file_get_contents(filename:'php://input' );
-                echo"recebeu o texto json com sucsso: $requestBody";
+                $disciplinaMiddleware = new DisciplinaMiddleware();
+                $stdDisciplina = $disciplinaMiddleware->stringJsonToStdClass(requestbody:$requestBody);
+
+                $disciplinaMiddleware->isValidNomeDisciplina(nomeDisciplina: $stdDisciplina->disciplina->nomeDisciplina)
+                    ->isValidIdProfessor($stdDisciplina->disciplina->professor->idProfessor)
+                    ->isValidIdAluno($stdDisciplina->disciplina->aluno->idAluno)
+                    ->isValidNomeMedia(media:$stdDisciplina->disciplina->media)
+                    ->hasNotDisciplinaByName(nomeDisciplina:$stdDisciplina->disciplina->nomeDisciplina);
+                
+                $professorMiddleware = new ProfessorMiddleware();
+                $professorMiddleware->isValidId(idProfessor:$stdDisciplina->disciplina->professor->idProfessor)
+                ->hasProfessorById(idProfessor:$stdDisciplina->disciplina->professor->idProfessor);
+
+                $alunoMiddleware = new AlunoMiddleware();
+                $alunoMiddleware->isValidId(idAluno:$stdDisciplina->disciplina->aluno->idAluno)
+                ->hasAlunoById(idAluno:$stdDisciplina->disciplina->aluno->idAluno);
+
+                $disciplinaControl = new DisciplinaControl();
+                $disciplinaControl->store(stdDisciplina:$stdDisciplina);
+
+
                 
             }catch(Throwable $throwable){
-                $this->sendErrorResponse(throwable: $throwable, message:'Erro na seleção de alunos');
+                $this->sendErrorResponse(throwable: $throwable, message:'Erro na seleção de disciplina');
             };
             exit();
         });
-        $this->router->put(pattern:'/diciplinas/(\w+)',fn: function($nomeDiciplina):never{
+        $this->router->put(pattern:'/disciplinas/(\d+)',fn: function($idDisciplina):never{
             try{
-                echo $nomeDiciplina;
+                /*
+                {
+                    "disciplina": {
+                        "nomeDisciplina": "POO3",
+                        "media": 8.4,
+                        "professor": {
+                            "idProfessor": 6
+                        },
+                        "aluno":{
+                            "idAluno":4
+                        }
+                        
+                    }
+                }
+
+                */
+                $requestBody = file_get_contents(filename:'php://input' );
+                $disciplinaMiddleware = new DisciplinaMiddleware();
+                $stdDisciplina = $disciplinaMiddleware->stringJsonToStdClass($requestBody);
+                $disciplinaMiddleware    
+                    ->isValidId(idDisciplina: $idDisciplina)
+                    ->hasNotDisciplinaByName(nomeDisciplina:$stdDisciplina->disciplina->nomeDisciplina);
+                
+                $stdDisciplina->disciplina->idDisciplina = $idDisciplina;
+
+                $disciplinaControl = new DisciplinaControl();
+                $disciplinaControl->edit(stdDisciplina:$stdDisciplina);
                 
             }catch(Throwable $throwable){
-                $this->sendErrorResponse(throwable: $throwable, message:'Erro na seleção de alunos');
+                $this->sendErrorResponse(throwable: $throwable, message:'Erro na seleção de disciplina');
             };
             exit();
         });
-        $this->router->delete(pattern:'/diciplinas/(\w+)',fn: function($nomeDiciplina):never{
+        $this->router->delete(pattern:'/disciplinas/(\d+)',fn: function($idDisciplina):never{
             try{
-                echo $nomeDiciplina;
+                $disciplinaMiddleware = new DisciplinaMiddleware();
+                $disciplinaMiddleware->isValidId(idDisciplina:$idDisciplina);
+
+                $disciplinaControl = new DisciplinaControl();
+                $disciplinaControl->destroy(idDisciplina:$idDisciplina);
                 
             }catch(Throwable $throwable){
-                $this->sendErrorResponse(throwable: $throwable, message:'Erro na seleção de alunos');
+                $this->sendErrorResponse(throwable: $throwable, message:'Erro na seleção de disciplina');
             };
             exit();
         });

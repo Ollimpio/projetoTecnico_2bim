@@ -114,4 +114,19 @@
 
             return $statement->rowCount() >0;
         }
+
+        /**
+         * Retorna id e nome do aluno para uso em Disciplina
+         */
+        public function readIdAndNomeById(int $idAluno): array {
+            $query = 'SELECT id_aluno,
+             nome AS nome_aluno
+              FROM aluno 
+              WHERE id_aluno = :id_Aluno';
+            $statement = Database::getConnection()->prepare(query: $query);
+            $statement->execute([
+                ':id_Aluno' => (int) $idAluno
+            ]);
+            return $statement->fetch(mode:PDO::FETCH_ASSOC) ?: [];
+        }
     }
